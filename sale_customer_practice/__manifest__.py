@@ -8,9 +8,10 @@
     'website': 'https://www.bizople.com',
     'summary': '',
     'description': "",
-    'depends': ['sale_management'],
+    'depends': ['sale_management','contacts'],
     'data': [
-           ],
+        'views/contact_view.xml'
+    ],
     'sequence': 1,
     'application': True,
     'installable': True,
