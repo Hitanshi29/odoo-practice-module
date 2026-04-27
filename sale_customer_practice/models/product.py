@@ -5,4 +5,8 @@ logger = logging.getLogger(__name__)
 class ResUsers(models.Model):
     _inherit = 'product.template'
 
-    product_variant_count = fields.Integer(string="Product Variant")
+    count_product_variant = fields.Integer(string="Product Variant",compute="action_count_product_variant")
+
+    def action_count_product_variant(self):
+        for record in self:
+            record.count_product_variant = len(record.product_variant_ids)

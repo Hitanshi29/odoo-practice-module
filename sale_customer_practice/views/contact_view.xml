@@ -7,7 +7,7 @@
             <field name="inherit_id" ref="base.view_partner_form"/>
             <field name="arch" type="xml">
                 <field name="vat" position="before">
-                    <field name="sale_order_count"/>
+                    <!-- <field name="count_sale_order"/> -->
                 </field>
 
                 <xpath expr="//field[@name='phone']" position="attributes">
@@ -18,9 +18,9 @@
                     <attribute name="required">True</attribute>
                 </xpath>
 
-                <!-- <xpath expr="//field[@name='name']" position="after">
-                    <field name="customer_code" readonly="1"/>
-                </xpath> -->
+                <xpath expr="//field[@name='name']" position="before">
+                    <!-- <field name="custom"/> -->
+                </xpath>
 
             </field>
         </record>
