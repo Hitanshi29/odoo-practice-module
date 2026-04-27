@@ -10,7 +10,10 @@
     'description': "",
     'depends': ['sale_management','contacts'],
     'data': [
-        'views/contact_view.xml'
+        # 'data/sequence.xml',
+        'views/contact_view.xml',
+        'views/product_view.xml',
+        'views/sale_order_line_view.xml',
     ],
     'sequence': 1,
     'application': True,

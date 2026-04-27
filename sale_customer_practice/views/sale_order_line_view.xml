@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+        <record id="show_quntatity" model="ir.ui.view">
+            <field name="name">sale.order.list.inherit</field>
+            <field name="model">sale.order</field>
+            <field name="inherit_id" ref="sale.view_quotation_tree_with_onboarding"/>
+            <field name="arch" type="xml">
+                <!-- <xpath expr="//field[@name='name']" position="after">
+                    <field name="quantity_count_order" readonly="1"/>
+                </xpath> -->
+                <field name="name" position="after">
+                    <!-- <field name="quantity_count_order" readonly="1"/> -->
+                </field>
+            </field>
+        </record>
+
+        <!-- <record id="view_sale_order_filter_today" model="ir.ui.view">
+            <field name="name">sale.order.today.filter</field>
+            <field name="model">sale.order</field>
+            <field name="inherit_id" ref="sale.view_sales_order_filter"/>
+            <field name="arch" type="xml">
+                <filter name="my_orders" position="after">
+                    <filter string="Today" name="today_orders"
+                        domain="[('date_order','>=', (context_today()).strftime('%%Y-%%m-%%d 00:00:00')),
+                                ('date_order','<=', (context_today()).strftime('%%Y-%%m-%%d 23:59:59'))]"
+                    />
+                </filter>
+            </field>
+        </record> -->
+    </data>
+</odoo>
+
