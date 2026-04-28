@@ -7,7 +7,7 @@
             <field name="inherit_id" ref="base.view_partner_form"/>
             <field name="arch" type="xml">
                 <field name="vat" position="before">
-                    <!-- <field name="count_sale_order"/> -->
+                    <field name="count_sale_order"/>
                 </field>
 
                 <xpath expr="//field[@name='phone']" position="attributes">
@@ -19,7 +19,7 @@
                 </xpath>
 
                 <xpath expr="//field[@name='name']" position="before">
-                    <!-- <field name="custom"/> -->
+                    <field name="custom"/>
                 </xpath>
 
             </field>

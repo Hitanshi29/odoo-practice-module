@@ -1,0 +1,5 @@
+<odoo>
+
+    <menuitem id="customer_name" name="Customer wise" parent="sale.sale_menu_root" action="action_customer_wise_sales"/>
+
+</odoo> 

@@ -11,8 +11,8 @@ class ResUsers(models.Model):
     def _compute_quantity_count(self):
         self.quantity_count_order = 0
         for data in self:
-            # logger.info(">>>>>>>>>>>",data.read())
+            logger.info(">>>>>>>>>>>",data.read())
             for order in data.order_line:
-                # logger.info(">>>>>>>>>>>>>>>>>>>>>>",order.product_uom_qty)
+                logger.info(">>>>>>>>>>>>>>>>>>>>>>",order.product_uom_qty)
                 self.quantity_count_order += int(order.product_uom_qty)
-                # logger.info(">>>>>>>>>>>>>>>>>>>>>>",self.quantity_count_order)
+                logger.info(">>>>>>>>>>>>>>>>>>>>>>",self.quantity_count_order)

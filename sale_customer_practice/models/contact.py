@@ -13,12 +13,12 @@ class ResUsers(models.Model):
             rec.count_sale_order = len(rec.sale_order_ids)
 
     custom = fields.Char(string="Custom", default='New', readonly=True)
-    
+
     @api.model
     def create(self, vals_list):
         for vals in vals_list:
             if vals.get('custom', 'New') == 'New':
                 vals['custom'] = self.env['ir.sequence'].next_by_code('res.partner') or 'New'
             result = super(ResUsers, self).create(vals)
-            # logger.info(">>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>",result)
+            logger.info(">>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>",result)
             return result
